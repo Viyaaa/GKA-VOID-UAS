@@ -30,5 +30,38 @@ public class Sc_Camera2 : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        GetKey();
+    }
+
+    void GetKey()
+    {
+        Ray ray = new Ray(this.transform.position, this.transform.forward);
+        Debug.DrawRay(this.transform.position, this.transform.forward * 3,
+        Color.red);
+        RaycastHit hit;
+        bool isRayHit = Physics.Raycast(ray, out hit, 3);
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (isRayHit)
+            {
+                if (hit.collider.CompareTag("pintu"))
+                {
+                    Sc_Pintu pintu = hit.collider.GetComponent<Sc_Pintu>();
+
+                    if (pintu == null) return;
+                    if (Sc_InventoryKunci.kuncis[pintu.index] == true)
+                    {
+                        Debug.Log("Bener Ini Pintunya.");
+                        pintu.stateBukaPintu();
+                    }
+                }
+                else if (hit.collider.CompareTag("kunci"))
+                {
+                    Sc_InventoryKunci.kuncis[hit.collider.GetComponent<Sc_Kunci>().index] = true;
+                    Destroy(hit.collider.gameObject);
+                }
+            }
+        }
     }
 }

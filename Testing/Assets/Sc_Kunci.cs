@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Sc_Kunci : MonoBehaviour
 {
-    Sc_PlayerText dialogPlayer;
+    public int index = -1;
+    //Sc_PlayerText dialogPlayer;
 
-    private void Start()
-    {
-        dialogPlayer = GameObject.FindObjectOfType<Sc_PlayerText>();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        StartCoroutine(dialogPlayer.showTextLanjut("Kunci apa ini? Siapa yang menaruh kunci disini?"));
-        Destroy(this.gameObject, 3);
-    }
+    //private void Start()
+    //{
+    //    dialogPlayer = GameObject.FindObjectOfType<Sc_PlayerText>();
+    //}
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    StartCoroutine(dialogPlayer.showTextLanjut("Kunci apa ini? Siapa yang menaruh kunci disini?"));
+    //    Destroy(this.gameObject, 3);
+    //}
 }

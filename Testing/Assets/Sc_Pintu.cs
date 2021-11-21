@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Sc_Pintu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator anim;
+    public int index = -1;
+    public bool open = false;
+
+    public void Start()
     {
-        
+        anim = this.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void stateBukaPintu()
     {
-        
+        open = !open;
+    }
+
+    private void Update()
+    {
+        if(open)
+        {
+            anim.SetBool("bukaPintu", true);
+        }
     }
 }

@@ -14,6 +14,11 @@ public class Sc_PlayerMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovementPlayer();
+    }
+
+    void MovementPlayer()
+    {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -24,19 +29,5 @@ public class Sc_PlayerMov : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-
-        Ray ray = new Ray(this.transform.position, this.transform.forward);
-        Debug.DrawRay(this.transform.position, this.transform.forward * 10,
-        Color.red);
-        RaycastHit hit;
-        bool isRayHit = Physics.Raycast(ray, out hit, 10);
-        if (isRayHit)
-        {
-
-            if (hit.collider.name == ("Door"))
-            {
-                Destroy(hit.transform.gameObject);
-            }
-        }
     }
 }
