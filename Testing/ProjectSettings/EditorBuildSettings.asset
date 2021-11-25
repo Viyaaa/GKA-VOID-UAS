@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/uts/Scenes/MainMenu.unity
+    guid: f516ffb8bd13a614db0574e164aee641
+  - enabled: 1
     path: Assets/Scenes/StoryAwal.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/uts/Scenes/Credits.unity
+    guid: ebce1173a606c4748b1e7dbca968899c
+  - enabled: 1
+    path: Assets/uts/Scenes/AudioSetting.unity
+    guid: 3aa835286605faf47b1d746af6a56248
+  - enabled: 1
+    path: Assets/uts/Scenes/HowToPlay.unity
+    guid: 65ab7850ccb400247bf18a4713deb48c
   - enabled: 1
     path: Assets/Abandoned_Asylum/Show.unity
     guid: 30fb6719a9eb1d84a807a42d598b16f8
