@@ -29,11 +29,11 @@ public class Sc_PlayerText : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator showTextLanjut(string text)
+    public IEnumerator showTextLanjut(string text, int duration)
     {
         textDialogue.enabled = true;
         textDialogue.text = text;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(duration);
         textDialogue.enabled = false;
     }
 }

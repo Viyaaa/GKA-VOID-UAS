@@ -71,7 +71,7 @@ public class Sc_Camera2 : MonoBehaviour
                     if(isOpen == false)
                     {
                         Debug.Log(hit.collider.GetComponent<Sc_Paper>().index);
-                        showPaper.showPaper(hit.collider.GetComponent<Sc_Paper>().index,true);
+                        showPaper.showPaper(hit.collider.GetComponent<Sc_Paper>().index, true);
                         Time.timeScale = 0f;
                         isOpen = true;
                     } else
@@ -82,7 +82,28 @@ public class Sc_Camera2 : MonoBehaviour
                         isOpen = false;
                     }
                 }
-
+                else if (hit.collider.CompareTag("laptop"))
+                {
+                    Sc_Laptop laptop = FindObjectOfType<Sc_Laptop>();
+                    if (!laptop.isOff)
+                    {
+                        laptop.isOff = true;
+                    } else
+                    {
+                        laptop.isOff = false;
+                    }
+                }
+                else if (hit.collider.CompareTag("projector"))
+                {
+                    Sc_Projector projector = FindObjectOfType<Sc_Projector>();
+                    if(!projector.isOn)
+                    {
+                        projector.isOn = true;
+                    } else
+                    {
+                        projector.isOn = false;
+                    }
+                }
             }
         }
     }

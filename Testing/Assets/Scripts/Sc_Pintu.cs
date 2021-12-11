@@ -8,6 +8,9 @@ public class Sc_Pintu : MonoBehaviour
     public int index = -1;
     public bool open = false;
 
+    [SerializeField] AudioSource doorSound;
+    [SerializeField] AudioClip doorSoundClip;
+
     public void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -16,6 +19,7 @@ public class Sc_Pintu : MonoBehaviour
     public void stateBukaPintu()
     {
         open = !open;
+        doorSound.PlayOneShot(doorSoundClip);
     }
 
     private void Update()

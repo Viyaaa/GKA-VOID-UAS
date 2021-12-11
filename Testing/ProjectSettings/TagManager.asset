@@ -8,6 +8,9 @@ TagManager:
   - pintu
   - kunci
   - paper
+  - loker
+  - laptop
+  - projector
   layers:
   - Default
   - TransparentFX

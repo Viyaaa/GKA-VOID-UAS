@@ -47,6 +47,13 @@ public class Sc_ReadPaper : MonoBehaviour
             {
                 case 1:
                     paper1.enabled = false;
+
+                    Sc_PlayerText teks = FindObjectOfType<Sc_PlayerText>();
+
+                    StartCoroutine(teks.showTextLanjut("Ada apa dengan isi dari diary ini? Kenapa dia begitu marah melihat anak-anak tertawa?", 3));
+
+                    StartCoroutine(teks.showTextLanjut("Aku tidak mengerti apa yang dimaksud oleh secarik kertas ini.", 3));
+
                     break;
                 case 2:
                     paper2.enabled = false;

@@ -37,6 +37,10 @@ public class Sc_PintuPassword : MonoBehaviour
                 closeKeypad(false);
             }
         }
+
+
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -45,6 +49,8 @@ public class Sc_PintuPassword : MonoBehaviour
         {
             closeKeypad(false);
         }
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     void closeKeypad(bool isClosed)

@@ -8,12 +8,50 @@ public class Playsound : MonoBehaviour
 	public string passwordPintu = "12345";
 	string input = "";
 
-	public void clicky()
+	/*
+    public void button0() { input = input + "0"; clicky(); }
+	public void button1() { input = input + "1"; clicky(); }
+	public void button2() { input = input + "2"; clicky(); }
+	public void button3() { input = input + "3"; clicky(); }
+	public void button4() { input = input + "4"; clicky(); }
+	public void button5() { input = input + "5"; clicky(); }
+	public void button6() { input = input + "6"; clicky(); }
+	public void button7() { input = input + "7"; clicky(); }
+	public void button8() { input = input + "8"; clicky(); }
+	public void button9() { input = input + "9"; clicky(); }
+	*/
+
+    public void clicky()
     {
 		GetComponent<AudioSource>().Play();
 		GetComponent<AudioSource>().volume = 0.01f;
 	}
+
     private void Update()
+    {
+		keypadNum();
+
+		teksInputPassword.text = input;
+
+		if(input.Length == 4)
+        {
+			if(input == passwordPintu)
+            {
+				input = "";
+				int indexKunciPintuPass = FindObjectOfType<Sc_Kunci>().index;
+				//FindObjectOfType<Sc_PintuPassword>().isClose = true;
+				Sc_InventoryKunci.kuncis[indexKunciPintuPass] = true;
+				Destroy(this.gameObject);
+				Debug.Log("buka pintunya");	
+            } else
+            {
+				input = ""; //kosongin lagi krn salah
+				Debug.Log("salah ya passwordnya");
+			}
+        }
+	}
+
+	void keypadNum()
     {
 		if (Input.GetKeyDown(KeyCode.Alpha0))
 		{
@@ -85,24 +123,9 @@ public class Playsound : MonoBehaviour
 			Debug.Log("Input: " + input);
 			clicky();
 		}
-
-		teksInputPassword.text = input;
-
-		if(input.Length == 4)
-        {
-			if(input == passwordPintu)
-            {
-				input = "";
-				int indexKunciPintuPass = FindObjectOfType<Sc_Kunci>().index;
-				//FindObjectOfType<Sc_PintuPassword>().isClose = true;
-				Sc_InventoryKunci.kuncis[indexKunciPintuPass] = true;
-				Destroy(this.gameObject);
-				Debug.Log("buka pintunya");	
-            } else
-            {
-				input = ""; //kosongin lagi krn salah
-				Debug.Log("salah ya passwordnya");
-			}
-        }
 	}
+
+	
+	
+	
 }

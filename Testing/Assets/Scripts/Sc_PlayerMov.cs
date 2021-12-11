@@ -31,5 +31,13 @@ public class Sc_PlayerMov : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if(x > 0 || z > 0)
+        {
+            if(!footstepPlayer.isPlaying)
+            {
+                footstepPlayer.Play();
+            }
+        }
     }
 }

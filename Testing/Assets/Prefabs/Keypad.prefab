@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7129548398173280671}
         m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
-        m_MethodName: Clicky
+        m_MethodName: button2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -527,8 +527,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548398611095268}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -930,8 +930,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548398663960472}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button7
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1175,8 +1175,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548398670185832}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1420,8 +1420,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548398684497806}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1823,8 +1823,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548399222045696}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2067,9 +2067,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7129548399222421158}
+      - m_Target: {fileID: 7129548399222421153}
         m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
-        m_MethodName: Clicky
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3215,8 +3215,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548399647910925}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button8
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3461,7 +3461,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7129548399657052809}
         m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
-        m_MethodName: Clicky
+        m_MethodName: button1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3705,8 +3705,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7129548399666830086}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Clicky
+        m_TargetAssemblyTypeName: Playsound, Assembly-CSharp
+        m_MethodName: button9
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
