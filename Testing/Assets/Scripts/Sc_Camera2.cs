@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sc_Camera2 : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
+
+    public Text jumlahToys;
+    private int points;
 
     public Transform playerBody;
 
@@ -103,6 +107,13 @@ public class Sc_Camera2 : MonoBehaviour
                     {
                         projector.isOn = false;
                     }
+                }
+                else if (hit.collider.CompareTag("Toys"))
+                {
+                    points =  int.Parse(jumlahToys.text)+1;
+                    jumlahToys.text = points.ToString();
+                    Destroy(hit.collider.gameObject);
+                    
                 }
             }
         }
