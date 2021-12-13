@@ -14,7 +14,7 @@ public class Sc_RuanganDialog : MonoBehaviour
 
         switch (idx)
         {
-            case 1: //203
+            case 1: //105 kantin
                 if(!passed)
                 {
                     dialogPlayer[0] = "Sepertinya tempat ini sudah ditinggalkan, tidak ada tanda-tanda kehidupan disini.";
@@ -26,7 +26,7 @@ public class Sc_RuanganDialog : MonoBehaviour
                 }
 
                 break;
-            case 2: //205
+            case 2: //203
                 if (!passed)
                 {
                     dialogPlayer[0] = "Ada apa dengan ruangan ini? Menakutkan sekali.";
@@ -37,7 +37,7 @@ public class Sc_RuanganDialog : MonoBehaviour
 
                 break;
 
-            case 3: //kelas
+            case 3: //205 kelas
                 if (!passed)
                 {
                     dialogPlayer[0] = "Tempat ini luas sekali, seperti ruang kelas.";
@@ -48,6 +48,27 @@ public class Sc_RuanganDialog : MonoBehaviour
 
                 break;
 
+            case 4: //kamar mandi
+                if (!passed)
+                {
+                    dialogPlayer[0] = "Kenapa ada banyak darah disini?";
+                    teks.addText(dialogPlayer);
+
+                    passed = true;
+                }
+
+                break;
+
+            case 5: //kamar mayat
+                if (!passed)
+                {
+                    dialogPlayer[0] = "Apa ini.. Kenapa banyak sekali hasil otopsi";
+                    teks.addText(dialogPlayer);
+
+                    passed = true;
+                }
+
+                break;
         }
     }
 }
