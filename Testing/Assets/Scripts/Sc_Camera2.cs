@@ -106,5 +106,13 @@ public class Sc_Camera2 : MonoBehaviour
                 }
             }
         }
+
+        if(isRayHit)
+        {
+            if(hit.collider.tag == "emily")
+            {
+                Destroy(hit.collider.gameObject);
+            }
+        }
     }
 }
