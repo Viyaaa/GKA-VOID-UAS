@@ -14,7 +14,7 @@ public class Sc_Camera2 : MonoBehaviour
 
     bool isOpen = false;
 
-    void Start()
+    private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }

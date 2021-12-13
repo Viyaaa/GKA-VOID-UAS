@@ -13,6 +13,10 @@ public class Sc_ReadPaper : MonoBehaviour
     public Image paper6;
     public Image paper7;
 
+    private string[] dialogPlayer = new string[10];
+    private bool paper1read = false;
+    private bool paper3read = false;
+
     public void showPaper(int idx, bool isShow)
     {
         if(isShow == true)
@@ -47,19 +51,35 @@ public class Sc_ReadPaper : MonoBehaviour
             {
                 case 1:
                     paper1.enabled = false;
+                    Sc_PlayerText teksPertama = FindObjectOfType<Sc_PlayerText>();
 
-                    Sc_PlayerText teks = FindObjectOfType<Sc_PlayerText>();
+                    if(!paper1read)
+                    {
+                        dialogPlayer[0] = "Ada apa dengan isi dari diary ini? Kenapa dia begitu marah melihat anak-anak tertawa?";
+                        dialogPlayer[1] = "Aku tidak mengerti apa yang dimaksud oleh secarik kertas ini.";
+                        dialogPlayer[2] = "Kenapa aku merasakan sakit di dadaku ketika melihat isi dari kertas ini?";
+                        dialogPlayer[3] = "Mungkin hanya firasatku saja, lebih baik cari tahu bagaimana aku bisa keluar dari tempat ini.";
+                        teksPertama.addText(dialogPlayer);
 
-                    StartCoroutine(teks.showTextLanjut("Ada apa dengan isi dari diary ini? Kenapa dia begitu marah melihat anak-anak tertawa?", 3));
-
-                    StartCoroutine(teks.showTextLanjut("Aku tidak mengerti apa yang dimaksud oleh secarik kertas ini.", 3));
-
+                        paper1read = true;
+                    }
                     break;
                 case 2:
                     paper2.enabled = false;
                     break;
                 case 3:
                     paper3.enabled = false;
+                    Sc_PlayerText teksTiga = FindObjectOfType<Sc_PlayerText>();
+
+                    if (!paper3read)
+                    {
+                        dialogPlayer[0] = "Siapa orang yang ada di foto ini? Mengapa ada surat yang berisikan minta tolong dan meminta ampun?";
+                        dialogPlayer[1] = "Apa yang telah ia perbuat sampai menuliskan minta tolong menggunakan darah?";
+                        teksTiga.addText(dialogPlayer);
+
+                        paper3read = true;
+                    }
+
                     break;
                 case 4:
                     paper4.enabled = false;

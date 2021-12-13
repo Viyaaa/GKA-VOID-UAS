@@ -11,6 +11,9 @@ public class Sc_Laptop : MonoBehaviour
     public string passwordPintu = "12345";
     string input = "";
 
+    private string[] dialogPlayer = new string[10];
+    private bool passed = false;
+
     public bool isOff = false;
 
     private void Awake()
@@ -70,6 +73,16 @@ public class Sc_Laptop : MonoBehaviour
                 isOff = true;
                 teksInputPassword.SetActive(false);
                 Time.timeScale = 1f;
+
+                Sc_PlayerText teks = FindObjectOfType<Sc_PlayerText>();
+
+                if (!passed)
+                {
+                    dialogPlayer[0] = "sepertinya aku pernah mengalami gangguan ini dan bersembunyi di toilet.";
+                    teks.addText(dialogPlayer);
+
+                    passed = true;
+                }
             }
             else
             {
