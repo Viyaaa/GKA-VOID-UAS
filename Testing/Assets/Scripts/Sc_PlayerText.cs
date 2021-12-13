@@ -67,7 +67,7 @@ public class Sc_PlayerText : MonoBehaviour
         }
 
         string sentence = textPlayer.Dequeue();
-        StartCoroutine(showTextLanjut(sentence, 2));
+        StartCoroutine(showTextLanjut(sentence, 4));
 
     }
 }

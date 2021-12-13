@@ -78,7 +78,7 @@ public class Sc_Laptop : MonoBehaviour
 
                 if (!passed)
                 {
-                    dialogPlayer[0] = "sepertinya aku pernah mengalami gangguan ini dan bersembunyi di toilet.";
+                    dialogPlayer[0] = "Paranoia? Sepertinya sebelum aku hilang ingatan aku pernah mengalami hal ini dan yang ku ingat hanyalah aku bersembunyi di kamar mandi karena terlalu takut.";
                     teks.addText(dialogPlayer);
 
                     passed = true;
