@@ -11,6 +11,7 @@ public class Sc_Camera2 : MonoBehaviour
 
     public Text jumlahToys;
     private int points;
+    private bool isHappyEnding = false;
 
     public Transform playerBody;
 

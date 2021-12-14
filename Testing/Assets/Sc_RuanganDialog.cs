@@ -14,7 +14,11 @@ public class Sc_RuanganDialog : MonoBehaviour
 
         switch (idx)
         {
+<<<<<<< Updated upstream
             case 1: //105 kantin
+=======
+            case 1: //
+>>>>>>> Stashed changes
                 if(!passed)
                 {
                     dialogPlayer[0] = "Sepertinya tempat ini sudah ditinggalkan, tidak ada tanda-tanda kehidupan disini.";
