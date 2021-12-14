@@ -17,13 +17,18 @@ public class Sc_ReadPaper : MonoBehaviour
     public Image paper10;
     public Image paper11;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public Image paper12;
 =======
 >>>>>>> Stashed changes
+=======
+    public Image paper12;
+>>>>>>> Stashed changes
 
-    private string[] dialogPlayer = new string[10];
+    private string[] dialogPlayer = new string[4];
     private bool paper1read = false;
     private bool paper3read = false;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     private bool paper8read = false;
     
@@ -31,6 +36,10 @@ public class Sc_ReadPaper : MonoBehaviour
     private bool paper7read = false;
     private bool paper8read = false;
 
+>>>>>>> Stashed changes
+=======
+    private bool paper7read = false;
+    private bool paper8read = false;
 >>>>>>> Stashed changes
 
     public void showPaper(int idx, bool isShow)
@@ -73,6 +82,7 @@ public class Sc_ReadPaper : MonoBehaviour
                     paper11.enabled = true;
                     break;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 case 12:
                     paper12.enabled = true;
                     break;
@@ -80,6 +90,13 @@ public class Sc_ReadPaper : MonoBehaviour
 =======
 >>>>>>> Stashed changes
                 
+=======
+                case 12:
+                    paper12.enabled = true;
+                    break;
+                
+
+>>>>>>> Stashed changes
             }
         } else
         {
@@ -95,7 +112,7 @@ public class Sc_ReadPaper : MonoBehaviour
                         dialogPlayer[1] = "Aku tidak mengerti apa yang dimaksud oleh secarik kertas ini.";
                         dialogPlayer[2] = "Kenapa aku merasakan sakit di dadaku ketika melihat isi dari kertas ini?";
                         dialogPlayer[3] = "Mungkin hanya firasatku saja, lebih baik cari tahu bagaimana aku bisa keluar dari tempat ini.";
-                        teksPertama.addText(dialogPlayer);
+                        teksPertama.addText(dialogPlayer, "normal");
 
                         paper1read = true;
                     }
@@ -111,7 +128,7 @@ public class Sc_ReadPaper : MonoBehaviour
                     {
                         dialogPlayer[0] = "Siapa orang yang ada di foto ini? Mengapa ada surat yang berisikan minta tolong dan meminta ampun?";
                         dialogPlayer[1] = "Apa yang telah ia perbuat sampai menuliskan minta tolong menggunakan darah?";
-                        teksTiga.addText(dialogPlayer);
+                        teksTiga.addText(dialogPlayer, "normal");
 
                         paper3read = true;
                     }
@@ -133,7 +150,11 @@ public class Sc_ReadPaper : MonoBehaviour
                     if (!paper7read)
                     {
                         dialogPlayer[0] = "Kenapa dia menulis dengan darah? Sebenarnya apa yang telah mereka alami hingga seperti ini?";
+<<<<<<< Updated upstream
                         teksTujuh.addText(dialogPlayer);
+=======
+                        teksTujuh.addText(dialogPlayer, "normal");
+>>>>>>> Stashed changes
 
                         paper7read = true;
                     }
@@ -146,6 +167,7 @@ public class Sc_ReadPaper : MonoBehaviour
                     {
                         dialogPlayer[0] = "Emily!? Sepertinya namanya tidak begitu asing diingatan ku.";
                         dialogPlayer[1] = "Em.. Emily.. aku ingat sekarang.. Emily anakku diperkosa dan dibunuh oleh anak-anak bajingan itu!";
+<<<<<<< Updated upstream
                         dialogPlayer[2] = "Maafkan ayah nak! Ayah sudah membalaskan dendam mu kepada anak-anak yang telah merengut senyum mu.";
                         teksDelapan.addText(dialogPlayer);
 
@@ -171,6 +193,22 @@ public class Sc_ReadPaper : MonoBehaviour
                         dialogPlayer[1] = "Em.. Emily.. aku ingat sekarang.. Emily anakku diperkaos dan dibunuh oleh anak-anak bajingan itu!";
                         dialogPlayer[2] = "Maafkan ayah nak! Ayah sudah membalaskan dendam mu kepada anak-anak yang telah merengut senyum mu.";
                         teksDelapan.addText(dialogPlayer);
+=======
+                        dialogPlayer[2] = "Maafkan ayah nak! Ayah sudah membalaskan dendam mu kepada anak-anak yang telah merengut senyummu.";
+
+                        Sc_Camera2 isHappy = FindObjectOfType<Sc_Camera2>();
+                        if (isHappy.points == 10)
+                        {
+                            teksDelapan.addText(dialogPlayer, "normal");
+                            Debug.Log("Happy Ending");
+                            StartCoroutine(teksDelapan.wink());
+                        }
+                        else
+                        {
+                            Debug.Log("Bad Ending");
+                            teksDelapan.addText(dialogPlayer, "bad");
+                        }
+>>>>>>> Stashed changes
 
                         paper8read = true;
                     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class Sc_Camera2 : MonoBehaviour
 {
@@ -10,7 +11,14 @@ public class Sc_Camera2 : MonoBehaviour
     public float maxTurnAngle = 90.0f;
 
     public Text jumlahToys;
+<<<<<<< Updated upstream
     private int points;
+=======
+    public int points;
+
+    public GameObject badEndingDialogue;
+    public GameObject happyEndingDialogue;
+>>>>>>> Stashed changes
     private bool isHappyEnding = false;
 
     public Transform playerBody;
@@ -21,6 +29,8 @@ public class Sc_Camera2 : MonoBehaviour
 
     private void Awake()
     {
+        badEndingDialogue.SetActive(false);
+        happyEndingDialogue.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -58,8 +68,17 @@ public class Sc_Camera2 : MonoBehaviour
                     if (pintu == null) return;
                     if (Sc_InventoryKunci.kuncis[pintu.index] == true)
                     {
-                        Debug.Log("Bener Ini Pintunya.");
-                        pintu.stateBukaPintu();
+                        if(pintu.index == 7)
+                        {
+                            Debug.Log("Heppy end");
+                            giveHappyEnding();
+                            return;
+                        }
+                        else
+                        {
+                            Debug.Log("Bener Ini Pintunya.");
+                            pintu.stateBukaPintu();
+                        }
                     }
                 }
                 else if (hit.collider.CompareTag("kunci"))
@@ -126,5 +145,17 @@ public class Sc_Camera2 : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
         }
+    }
+
+    void giveHappyEnding()
+    {
+        happyEndingDialogue.SetActive(true);
+        happyEndingDialogue.GetComponent<PlayableDirector>().Play();
+    }
+
+    public void badEndSorry()
+    {
+        badEndingDialogue.SetActive(true);
+        badEndingDialogue.GetComponent<PlayableDirector>().Play();
     }
 }

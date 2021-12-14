@@ -79,7 +79,11 @@ public class Sc_Laptop : MonoBehaviour
                 if (!passed)
                 {
                     dialogPlayer[0] = "Paranoia? Sepertinya sebelum aku hilang ingatan aku pernah mengalami hal ini dan yang ku ingat hanyalah aku bersembunyi di kamar mandi karena terlalu takut.";
+<<<<<<< Updated upstream
                     teks.addText(dialogPlayer);
+=======
+                    teks.addText(dialogPlayer, "normal");
+>>>>>>> Stashed changes
 
                     passed = true;
                 }

@@ -7,12 +7,16 @@ public class Sc_PlayerText : MonoBehaviour
 {
     public Text textDialogue;
     public Image paperImage;
+    public Image blackImage;
     //public static bool isOpen = false;
+    private string mode;
+    public GameObject lastObject;
 
     public Queue<string> textPlayer;
 
     private void Awake()
     {
+        blackImage.enabled = false;
         textDialogue.enabled = false;
     }
 
@@ -46,7 +50,7 @@ public class Sc_PlayerText : MonoBehaviour
         ShowDialogue();
     }
 
-    public void addText(string [] teks)
+    public void addText(string [] teks, string mode)
     {
         textPlayer.Clear();
 
@@ -55,6 +59,8 @@ public class Sc_PlayerText : MonoBehaviour
             textPlayer.Enqueue(teks[i]);
         }
 
+        this.mode = mode;
+
         ShowDialogue();
     }
 
@@ -62,12 +68,31 @@ public class Sc_PlayerText : MonoBehaviour
     {
         if(textPlayer.Count == 0)
         {
-            Debug.Log("kelar");
-            return;
+            if(this.mode.Contains("normal"))
+            {
+                Debug.Log("kelar");
+                return;
+            } else if (this.mode.Contains("bad"))
+            {
+                Sc_Camera2 badEnd = FindObjectOfType<Sc_Camera2>();
+                badEnd.badEndSorry();
+                return;
+            }
         }
-
+        Debug.Log(textPlayer.Count);
         string sentence = textPlayer.Dequeue();
+<<<<<<< Updated upstream
         StartCoroutine(showTextLanjut(sentence, 4));
+=======
+        StartCoroutine(showTextLanjut(sentence, 3));
+    }
+>>>>>>> Stashed changes
 
+    public IEnumerator wink()
+    {
+        blackImage.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        blackImage.enabled = false;
+        lastObject.SetActive(true);
     }
 }
