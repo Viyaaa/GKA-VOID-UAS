@@ -341,7 +341,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -351,7 +351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Anehnya aku juga tidak tahu mengapa aku bisa sampai di sini.
+  m_Text: "Anehnya aku juga tidak tahu mengapa aku bisa sampai di sini.\r"
 --- !u!222 &129410837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -544,8 +544,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aku terbangun di sebuah ruangan yang dingin dan gelap, hanya ada remang
+  m_Text: "Aku terbangun di sebuah ruangan yang dingin dan gelap, hanya ada remang
     cahaya yang masih mampu menyinari pandangan mataku untuk melihat keadaan sekitar.
+    \r\n"
 --- !u!222 &218985868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -895,7 +896,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -905,10 +906,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\"Aku benci melihat senyuman yang muncul di wajah anak itu. Aku benci
-    melihat mereka masih bisa menikmati kehidupan dan makan dengan lezatnya. Aku
-    ingin mereka juga merasakan bagaimana rasanya sakit dan kehilangan napas. Seperti
-    anak kucing yang ditenggelamkan perlahan-lahan. \r\""
+  m_Text: "Aku benci melihat senyuman yang muncul di wajah anak itu. Aku benci melihat
+    mereka masih bisa menikmati kehidupan dan makan dengan lezatnya. Aku ingin mereka
+    juga merasakan bagaimana rasanya sakit dan kehilangan napas. Seperti ikan yang
+    dibawa keluar dari air dan pelan-pelan kehilangan kesadaran dirinya. \r"
 --- !u!222 &512899835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1258,7 +1259,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1517,7 +1518,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1527,8 +1528,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aku juga tidak mengingat apa yang telah terjadi pada diriku dan siapakah
-    diriku sebenarnya.
+  m_Text: "Aku juga tidak mengingat apa yang telah terjadi pada diriku dan siapakah
+    diriku sebenarnya. \r"
 --- !u!222 &1079899646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1578,7 +1579,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1588,8 +1589,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tidak ada siapa pun di sini, hanya ada suara jangkrik yang menemani diriku
-    di sunyi senyap ruangan ini.
+  m_Text: "Tidak ada siapa pun di sini, hanya ada suara jangkrik yang menemani diriku
+    di sunyi senyap ruangan ini. \r\n"
 --- !u!222 &1285765213
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1658,7 +1659,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1737,7 +1738,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1747,8 +1748,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aku hanya mengingat orang-orang yang tidak aku kenal itu terus memanggilku
-    dengan sebutan ... kenapa aku tidak bisa mengingatnya?
+  m_Text: "Aku hanya mengingat orang-orang yang tidak aku kenal itu terus memanggilku
+    dengan sebutan \u201CDavid\u201D, sebelum akhirnya aku kehilangan kesadaranku
+    dan berakhir di sini. \r"
 --- !u!222 &1411791340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1817,7 +1819,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1827,8 +1829,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aku melihat ada secarik kertas yang berada di atas nakas di samping tempat
-    tidurku. Aku mengambilnya dan membacanya.
+  m_Text: "Aku melihat ada secarik kertas yang berada di atas nakas di samping tempat
+    tidurku. Aku mengambilnya dan membacanya. \r"
 --- !u!222 &1624456944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1919,8 +1921,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aku tak pernah menyangka bahwa aku sekeji itu, tapi itu semua kulakukan
-    demi dirinya.
+  m_Text: "Aku tak pernah menyangka bahwa aku sekeji itu,\r\ntapi itu semua kulakukan
+    demi dirinya.\r"
 --- !u!222 &1772079366
 CanvasRenderer:
   m_ObjectHideFlags: 0
