@@ -50,7 +50,7 @@ public class Sc_PintuPassword : MonoBehaviour
             closeKeypad(false);
         }
         //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        //Cursor.visible = true;
     }
 
     void closeKeypad(bool isClosed)

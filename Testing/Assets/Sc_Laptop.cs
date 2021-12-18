@@ -11,7 +11,7 @@ public class Sc_Laptop : MonoBehaviour
     public string passwordPintu = "12345";
     string input = "";
 
-    private string[] dialogPlayer = new string[10];
+    private string[] dialogPlayer = new string[2];
     private bool passed = false;
 
     public bool isOff = false;
@@ -31,27 +31,18 @@ public class Sc_Laptop : MonoBehaviour
             teksLaptop.text = "";
 
             teksInputPassword.SetActive(false);
-
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-
         } else
         {
             //nyalain laptop
             laptopOn.SetActive(true);
 
             teksInputPassword.SetActive(true);
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            Time.timeScale = 0f;
         }
     }
 
     public void passwordLaptop()
     {
-        Debug.Log(teksLaptop.text.ToString());
+        //Debug.Log(teksLaptop.text.ToString());
         input = teksLaptop.text.ToString();
 
         Playsound passLaptop = FindObjectOfType<Playsound>();
@@ -64,8 +55,10 @@ public class Sc_Laptop : MonoBehaviour
         {
             if (passLaptop == passwordPintu)
             {
-                passLaptop = "";
-                int indexKunciPintuPass = FindObjectOfType<Sc_Kunci>().index;
+                //passLaptop = "";
+                
+                int indexKunciPintuPass = this.gameObject.GetComponent<Sc_Kunci>().index;
+                Debug.Log("kunci ke-" + indexKunciPintuPass);
                 //FindObjectOfType<Sc_PintuPassword>().isClose = true;
                 Sc_InventoryKunci.kuncis[indexKunciPintuPass] = true;
                 //Destroy(this.gameObject);
@@ -78,14 +71,18 @@ public class Sc_Laptop : MonoBehaviour
 
                 if (!passed)
                 {
-                    dialogPlayer[0] = "sepertinya aku pernah mengalami gangguan ini dan bersembunyi di toilet.";
-                    teks.addText(dialogPlayer);
+                    dialogPlayer[0] = "Paranoia? Sepertinya sebelum aku hilang ingatan aku pernah mengalami hal ini dan yang ku ingat hanyalah aku bersembunyi di kamar mandi karena terlalu takut.";
+                    teks.addText(dialogPlayer, "normal");
 
                     passed = true;
+
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
                 }
             }
             else
             {
+                teksLaptop.text = "";
                 isOff = false;
             }
         }

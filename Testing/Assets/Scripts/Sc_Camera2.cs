@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class Sc_Camera2 : MonoBehaviour
 {
@@ -10,7 +11,14 @@ public class Sc_Camera2 : MonoBehaviour
     public float maxTurnAngle = 90.0f;
 
     public Text jumlahToys;
-    private int points;
+    public int points;
+
+    public GameObject badEndingDialogue;
+    public GameObject happyEndingDialogue;
+    private bool isHappyEnding = false;
+
+    public AudioSource emilySound;
+    public AudioClip emilySoundClip;
 
     public Transform playerBody;
 
@@ -20,6 +28,8 @@ public class Sc_Camera2 : MonoBehaviour
 
     private void Awake()
     {
+        badEndingDialogue.SetActive(false);
+        happyEndingDialogue.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -27,8 +37,10 @@ public class Sc_Camera2 : MonoBehaviour
     void Update()
     {
         // get the mouse inputs
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * FindObjectOfType<Sc_Pause>().adjustSensitivity() * Time.smoothDeltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * FindObjectOfType<Sc_Pause>().adjustSensitivity() * Time.smoothDeltaTime;
+
+        //Debug.Log("Sensi: "+ FindObjectOfType<Sc_Pause>().adjustSensitivity());
 
         xRot -= mouseY;
         xRot = Mathf.Clamp(xRot, minTurnAngle, maxTurnAngle);
@@ -57,8 +69,17 @@ public class Sc_Camera2 : MonoBehaviour
                     if (pintu == null) return;
                     if (Sc_InventoryKunci.kuncis[pintu.index] == true)
                     {
-                        Debug.Log("Bener Ini Pintunya.");
-                        pintu.stateBukaPintu();
+                        if (pintu.index == 7)
+                        {
+                            Debug.Log("Heppy end");
+                            giveHappyEnding();
+                            return;
+                        }
+                        else
+                        {
+                            Debug.Log("Bener Ini Pintunya.");
+                            pintu.stateBukaPintu();
+                        }
                     }
                 }
                 else if (hit.collider.CompareTag("kunci"))
@@ -92,9 +113,14 @@ public class Sc_Camera2 : MonoBehaviour
                     if (!laptop.isOff)
                     {
                         laptop.isOff = true;
+                        Time.timeScale = 1f;
+                        Cursor.visible = false;
                     } else
                     {
                         laptop.isOff = false;
+                        Time.timeScale = 0f;
+                        Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                     }
                 }
                 else if (hit.collider.CompareTag("projector"))
@@ -122,8 +148,25 @@ public class Sc_Camera2 : MonoBehaviour
         {
             if(hit.collider.tag == "emily")
             {
+                emilySound.PlayOneShot(emilySoundClip);
                 Destroy(hit.collider.gameObject);
             }
         }
+    }
+
+    void giveHappyEnding()
+    {
+        FindObjectOfType<Sc_PlayerMov>().enabled = false;
+        mouseSensitivity = 0f;
+        happyEndingDialogue.SetActive(true);
+        happyEndingDialogue.GetComponent<PlayableDirector>().Play();
+    }
+
+    public void badEndSorry()
+    {
+        FindObjectOfType<Sc_PlayerMov>().enabled = false;
+        mouseSensitivity = 0f;
+        badEndingDialogue.SetActive(true);
+        badEndingDialogue.GetComponent<PlayableDirector>().Play();
     }
 }

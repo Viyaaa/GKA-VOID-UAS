@@ -7,6 +7,7 @@ public class Sc_Pintu : MonoBehaviour
     public Animator anim;
     public int index = -1;
     public bool open = false;
+    public bool isPlayed = false;
 
     [SerializeField] AudioSource doorSound;
     [SerializeField] AudioClip doorSoundClip;
@@ -19,7 +20,11 @@ public class Sc_Pintu : MonoBehaviour
     public void stateBukaPintu()
     {
         open = !open;
-        doorSound.PlayOneShot(doorSoundClip);
+        if(!this.isPlayed)
+        {
+            doorSound.PlayOneShot(doorSoundClip);
+            this.isPlayed = true;
+        }
     }
 
     private void Update()

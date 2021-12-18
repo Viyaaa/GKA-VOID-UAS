@@ -38,11 +38,11 @@ public class Playsound : MonoBehaviour
 			if(input == passwordPintu)
             {
 				input = "";
-				int indexKunciPintuPass = FindObjectOfType<Sc_Kunci>().index;
+				int indexKunciPintuPass = this.GetComponent<Sc_Kunci>().index;
 				//FindObjectOfType<Sc_PintuPassword>().isClose = true;
 				Sc_InventoryKunci.kuncis[indexKunciPintuPass] = true;
+				Debug.Log("buka pintunya: " + indexKunciPintuPass);	
 				Destroy(this.gameObject);
-				Debug.Log("buka pintunya");	
             } else
             {
 				input = ""; //kosongin lagi krn salah

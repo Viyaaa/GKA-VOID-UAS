@@ -13,6 +13,7 @@ public class loadSceneAsync : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<BackgroundMusic>().changetoInGame();
         textToStart.enabled = false;
         StartCoroutine(sceneLoadAsync());
     }

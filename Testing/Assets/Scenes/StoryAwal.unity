@@ -281,6 +281,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72246276}
   m_CullTransparentMesh: 1
+--- !u!1 &79685067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 79685068}
+  - component: {fileID: 79685070}
+  - component: {fileID: 79685069}
+  m_Layer: 5
+  m_Name: Caution
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &79685068
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79685067}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1984243492}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.19726692, y: 0.33971924}
+  m_AnchorMax: {x: 0.80273306, y: 0.7003991}
+  m_AnchoredPosition: {x: -0.01958847, y: 0.0000038146973}
+  m_SizeDelta: {x: 764.6794, y: 79.385}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &79685069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79685067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Caution!
+
+    Harap mengatur Mouse Sensitivity dengan menekan ''Esc''
+    setelah menekan tombol Start.'
+--- !u!222 &79685070
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79685067}
+  m_CullTransparentMesh: 1
 --- !u!1 &129410834
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +422,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -351,7 +433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Anehnya aku juga tidak tahu mengapa aku bisa sampai di sini.\r"
+  m_Text: Anehnya aku juga tidak tahu mengapa aku bisa sampai di sini.
 --- !u!222 &129410837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -493,6 +575,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -213}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &176643245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176643247}
+  m_Layer: 0
+  m_Name: bgmInGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176643247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176643245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.94, y: -3.54, z: -14.96}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218985866
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,8 +645,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -544,9 +656,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aku terbangun di sebuah ruangan yang dingin dan gelap, hanya ada remang
+  m_Text: Aku terbangun di sebuah ruangan yang dingin dan gelap, hanya ada remang
     cahaya yang masih mampu menyinari pandangan mataku untuk melihat keadaan sekitar.
-    \r\n"
 --- !u!222 &218985868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -895,8 +1006,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -906,10 +1017,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aku benci melihat senyuman yang muncul di wajah anak itu. Aku benci melihat
-    mereka masih bisa menikmati kehidupan dan makan dengan lezatnya. Aku ingin mereka
-    juga merasakan bagaimana rasanya sakit dan kehilangan napas. Seperti ikan yang
-    dibawa keluar dari air dan pelan-pelan kehilangan kesadaran dirinya. \r"
+  m_Text: "\"Aku benci melihat senyuman yang muncul di wajah anak itu. Aku benci
+    melihat mereka masih bisa menikmati kehidupan dan makan dengan lezatnya. Aku
+    ingin mereka juga merasakan bagaimana rasanya sakit dan kehilangan napas. Seperti
+    anak kucing yang ditenggelamkan perlahan-lahan. \r\""
 --- !u!222 &512899835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1258,8 +1369,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1517,8 +1628,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1528,8 +1639,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aku juga tidak mengingat apa yang telah terjadi pada diriku dan siapakah
-    diriku sebenarnya. \r"
+  m_Text: Aku juga tidak mengingat apa yang telah terjadi pada diriku dan siapakah
+    diriku sebenarnya.
 --- !u!222 &1079899646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1578,8 +1689,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1589,8 +1700,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tidak ada siapa pun di sini, hanya ada suara jangkrik yang menemani diriku
-    di sunyi senyap ruangan ini. \r\n"
+  m_Text: Tidak ada siapa pun di sini, hanya ada suara jangkrik yang menemani diriku
+    di sunyi senyap ruangan ini.
 --- !u!222 &1285765213
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1658,8 +1769,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1737,8 +1848,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1748,9 +1859,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aku hanya mengingat orang-orang yang tidak aku kenal itu terus memanggilku
-    dengan sebutan \u201CDavid\u201D, sebelum akhirnya aku kehilangan kesadaranku
-    dan berakhir di sini. \r"
+  m_Text: Aku hanya mengingat orang-orang yang tidak aku kenal itu terus memanggilku
+    dengan sebutan ... kenapa aku tidak bisa mengingatnya?
 --- !u!222 &1411791340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1818,8 +1928,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 2
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1829,8 +1939,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aku melihat ada secarik kertas yang berada di atas nakas di samping tempat
-    tidurku. Aku mengambilnya dan membacanya. \r"
+  m_Text: Aku melihat ada secarik kertas yang berada di atas nakas di samping tempat
+    tidurku. Aku mengambilnya dan membacanya.
 --- !u!222 &1624456944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1910,7 +2020,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 20
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -1921,8 +2031,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aku tak pernah menyangka bahwa aku sekeji itu,\r\ntapi itu semua kulakukan
-    demi dirinya.\r"
+  m_Text: Aku tak pernah menyangka bahwa aku sekeji itu, tapi itu semua kulakukan
+    demi dirinya.
 --- !u!222 &1772079366
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1947,8 +2057,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19726692, y: 0.33971924}
   m_AnchorMax: {x: 0.80273306, y: 0.7003991}
-  m_AnchoredPosition: {x: 0.00024414062, y: 6.6395874}
-  m_SizeDelta: {x: 669.94824, y: 79.38505}
+  m_AnchoredPosition: {x: -4.9434, y: 6.6395874}
+  m_SizeDelta: {x: 739.1862, y: 79.385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1851722036
 GameObject:
@@ -2066,6 +2176,7 @@ RectTransform:
   - {fileID: 512899836}
   - {fileID: 1326014460}
   - {fileID: 978160382}
+  - {fileID: 79685068}
   m_Father: {fileID: 2113731746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2223,6 +2334,8 @@ PlayableDirector:
     value: {fileID: 978160379}
   - key: {fileID: 7544441288657737431, guid: 4b426d766e7ecf840a96e3edf24ef2a4, type: 2}
     value: {fileID: 130019065}
+  - key: {fileID: 6542822637242577334, guid: 4b426d766e7ecf840a96e3edf24ef2a4, type: 2}
+    value: {fileID: 79685067}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2113731748

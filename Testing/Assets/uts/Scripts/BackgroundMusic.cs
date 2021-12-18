@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BackgroundMusic : MonoBehaviour
 {
-    private static BackgroundMusic backgroundMusic; 
+    private static BackgroundMusic backgroundMusic;
+    public AudioSource mainMenu;
+    public AudioSource inGame;
     void Awake(){
-        if(backgroundMusic == null){
+
+        if (backgroundMusic == null){
             backgroundMusic = this;
             DontDestroyOnLoad(backgroundMusic);
         }
@@ -14,5 +17,18 @@ public class BackgroundMusic : MonoBehaviour
         else {
             Destroy(gameObject);
         }
+    }
+
+    public void changetoInGame()
+    {
+        Debug.Log("Masuk");
+        this.mainMenu.Stop();
+        inGame.Play();
+    }
+
+    public void changetoMainMenu()
+    {
+        this.mainMenu.Play();
+        inGame.Stop();
     }
 }

@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Sc_MainMenu : MonoBehaviour
 {
+    public AudioSource bgm;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void toSceneTeori()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
